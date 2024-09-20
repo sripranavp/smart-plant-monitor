@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Plant Monitoring Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Plant Monitoring System</h1>
+        
+        <div id="sensor-inputs">
+            <label for="soil_moisture">Soil Moisture:</label>
+            <input type="number" id="soil_moisture" placeholder="Enter soil moisture"><br>
+
+            <label for="temperature">Temperature (°C):</label>
+            <input type="number" id="temperature" placeholder="Enter temperature"><br>
+
+            <label for="humidity">Humidity (%):</label>
+            <input type="number" id="humidity" placeholder="Enter humidity"><br>
+
+            <button id="predict-btn">Predict</button>
+        </div>
+
+        <div id="result">
+            <h3>Prediction Result: <span id="prediction"></span></h3>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
